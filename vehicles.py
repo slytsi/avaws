@@ -20,11 +20,11 @@ import leftfrontwheel
 import rightrearwheel
 import leftrearwheel
 
-# Change the endpoint to your AWS IoT service account specific region and id
+# Change the endpoint to your AWS IoT service account specific region and id.
 AwsRestEndpoint = "xxxxxxxxxx.iot.us-east-1.amazonaws.com"
 Awsport = 8883
 
-#Certificates
+#Create a thing, policy and certificate in the AWS IoT service. Attach them together and copy them locally.
 CaPath = "/pathtoCA/VeriSign.pem"
 CertPath = "/pathtoThingCert/IoTCert.pem.crt"
 KeyPath = "/pathtoThingKey/privateKey.pem.key"
