@@ -123,12 +123,12 @@ class BaseVehicle:
             unixtime = str(datetime.datetime.now())
             event = uuid.uuid4()
             eventid= event.hex
+            #Create a TTL of data to be stored in DynamoDB
             dynamodb_ttl = int(time.time()) + 2592000
             #Change wheel travel to a measurement in inches. 9.5 is default value for magnet rc truck.
             wheel_travel = 9.5
             feet = 12
             wheel_rotations_per_mile = 63360
-            speed_reset = random.randint(1,9)
             #Arbitrary batter capacity to simulate battery consumption
             battery_capacity = 5320
             #Wheel calculations from individual wheel python scripts/sensors
